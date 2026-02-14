@@ -16,11 +16,7 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [upcomingEvents, setUpcomingEvents] = useState([]);
 
-  const filteredEvents = eventsData.filter(
-    (event) =>
-      event.title.toLowerCase().includes(search.toLowerCase()) ||
-      event.location.toLowerCase().includes(search.toLowerCase()),
-  );
+
 
   useEffect(() => {
     axios
@@ -93,19 +89,6 @@ const Home = () => {
           ))}
         </div>
       </section>
-
-      {/* EVENTS */}
-      {/* <section className="max-w-7xl mx-auto px-6 pb-24">
-        <h2 className="text-3xl font-bold text-center mb-10">
-          Upcoming Events
-        </h2>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {filteredEvents.map((event) => (
-            <EventCard key={event.id} event={event} />
-          ))}
-        </div>
-      </section> */}
 
       {/* EVENTS */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
